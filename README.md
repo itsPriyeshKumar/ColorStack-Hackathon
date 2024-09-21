@@ -1,2 +1,2 @@
 # ColorStack-Hackathon
-Social Network for Binghamton
+Social Network for Binghamton University
