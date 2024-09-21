@@ -34,7 +34,6 @@ const pages = [
     route: "blog",
   },
 ];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function AppHeader() {
   const navigate = useNavigate();
@@ -172,13 +171,21 @@ function AppHeader() {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography sx={{ textAlign: "center" }}>
-                    {setting}
-                  </Typography>
-                </MenuItem>
-              ))}
+              <MenuItem key={"profile"} onClick={() => navigate("/profile")}>
+                <Typography sx={{ textAlign: "center" }}>
+                  {"Profile"}
+                </Typography>
+              </MenuItem>
+              <MenuItem
+                key={"logout"}
+                onClick={() => {
+                  document.cookie =
+                    "session=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+                  window.location.href = "http://localhost:8000/";
+                }}
+              >
+                <Typography sx={{ textAlign: "center" }}>{"Logout"}</Typography>
+              </MenuItem>
             </Menu>
           </Box>
         </Toolbar>

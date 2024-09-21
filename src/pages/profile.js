@@ -76,7 +76,7 @@ const UserProfileForm = () => {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          mt: 5,
+          m: 5,
         }}
       >
         <TextField

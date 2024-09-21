@@ -1,0 +1,120 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #e8f5f1, #f7fffc);
+
+  min-height: 100vh;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #005a43, #007d5a);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.card {
+  margin: 5rem;
+  background: linear-gradient(135deg, #f8f9fa, #ffffff);
+
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+h1,
+h2,
+h3 {
+  background: linear-gradient(135deg, #005a43, #007d5a);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.feature {
+  flex-basis: calc(33.333% - 2rem);
+  text-align: center;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+}
+
+.icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.coffee-icon::before {
+  content: "☕";
+}
+.map-icon::before {
+  content: "🗺️";
+}
+.shop-icon::before {
+  content: "🛍️";
+}
+
+p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.g_id_signin {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.alert {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #fff3cd;
+  color: #856404;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.alert-icon::before {
+  content: "⚠️";
+  margin-right: 0.5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .card {
+    margin: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .feature {
+    flex-basis: 100%;
+  }
+}
