@@ -3,39 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BearChat - Binghamton University Social Network</title>
+    <title>BearChat - Login</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h1 class="title">Welcome to BearChat</h1>
-        <div class="card">
-            <h2>Connect with Binghamton University Students</h2>
+        <div class="login-card">
+            <div class="brand">
+                <h1 class="title">BearChat</h1>
+                <p class="subtitle">Connect with Binghamton University</p>
+            </div>
             <div class="features">
                 <div class="feature">
-                    <i class="icon coffee-icon"></i>
+                    <i class="icon coffee-icon">☕</i>
                     <h3>Coffee Chats</h3>
-                    <p>Connect for professional or casual meetups</p>
+                    <p>Connect for meetups</p>
                 </div>
                 <div class="feature">
-                    <i class="icon map-icon"></i>
+                    <i class="icon map-icon">🗺️</i>
                     <h3>Outing Buddy</h3>
-                    <p>Find travel companions for your next adventure</p>
+                    <p>Find travel companions</p>
                 </div>
                 <div class="feature">
-                    <i class="icon shop-icon"></i>
-                    <h3>Student Marketplace</h3>
-                    <p>Buy and sell items within the community</p>
+                    <i class="icon shop-icon">🛍️</i>
+                    <h3>Marketplace</h3>
+                    <p>Buy and sell items</p>
                 </div>
             </div>
-            <div id="g_id_onload"
-                 data-client_id="281781751899-nktpbjtr43fj0ip8k05oku7pahjgd4ar.apps.googleusercontent.com"
-                 data-callback="handleCredentialResponse">
+            <div class="login-section">
+                <div id="g_id_onload"
+                     data-client_id="281781751899-nktpbjtr43fj0ip8k05oku7pahjgd4ar.apps.googleusercontent.com"
+                     data-callback="handleCredentialResponse">
+                </div>
+                <div class="g_id_signin" data-type="standard"></div>
             </div>
-            <div class="g_id_signin" data-type="standard"></div>
-            <div id="alert" class="alert hidden"></div>
+            <div id="errorMessage" class="error hidden"></div>
         </div>
     </div>
     <script src="script.js"></script>
